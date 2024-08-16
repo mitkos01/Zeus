@@ -25,6 +25,6 @@ public class PlayerController : MonoBehaviour
 
     void UpdateHealthUI()
     {
-        healthText.text = "Health: " + health;
+        healthText.text = health.ToString();
     }
 }

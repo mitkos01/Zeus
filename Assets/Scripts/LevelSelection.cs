@@ -7,4 +7,8 @@ public class LevelSelection : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
+    public void BackButton()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

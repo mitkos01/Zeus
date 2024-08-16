@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9137419483517815077}
   - component: {fileID: 5554968133922923690}
-  - component: {fileID: 6296826525819938153}
   - component: {fileID: 1149460491895123633}
   - component: {fileID: -2639970171946636450}
+  - component: {fileID: 758816400444963665}
   m_Layer: 0
   m_Name: Circle
   m_TagString: Ball
@@ -87,21 +87,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6296826525819938153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8832463660546705233}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f87daa5d79c917346b6fe2c330ac0ee1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pathPoints: []
-  player: {fileID: 0}
-  speed: 5
 --- !u!58 &1149460491895123633
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -145,7 +130,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8832463660546705233}
-  m_BodyType: 1
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -164,3 +149,18 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &758816400444963665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8832463660546705233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162d08a8b2bc4e14992052bf500a8b52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pathPoints: []
+  player: {fileID: 0}
+  speed: 5

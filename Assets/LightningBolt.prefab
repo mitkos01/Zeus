@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 2927762506210979855}
   - component: {fileID: 925838801064848182}
-  - component: {fileID: 6645786110545390424}
   - component: {fileID: -2586177961539405552}
   - component: {fileID: 4647885194778421748}
+  - component: {fileID: 7936769265847835105}
   m_Layer: 0
-  m_Name: Lightning
+  m_Name: LightningBolt
   m_TagString: Lightning
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,25 +81,12 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.32, y: 0.32}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6645786110545390424
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2376951968694748290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27f12d3ee69f6454f955f9c7fff1610e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 8
 --- !u!70 &-2586177961539405552
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -162,3 +149,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7936769265847835105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2376951968694748290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 840339a986111b04287ab763ebd98c0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
