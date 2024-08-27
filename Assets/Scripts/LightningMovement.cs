@@ -48,8 +48,8 @@ public class LightningMovement : MonoBehaviour
     {
         if (collision.CompareTag("Ball"))
         {
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<BallMovement>().player.GetComponent<PlayerController>().AddCoin();  // Начисляем монету
+            Destroy(collision.gameObject);  // Уничтожаем шарик
         }
-
     }
 }

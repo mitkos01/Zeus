@@ -6,12 +6,18 @@ public class BallMovement : MonoBehaviour
     public Transform player;
     public float speed = 5f;
     private int currentPointIndex = 0;
+    private BallSpawner ballSpawner;
 
     public void Initialize(Transform[] points, Transform playerTransform)
     {
         pathPoints = points;
         player = playerTransform;
         transform.position = pathPoints[currentPointIndex].position;
+    }
+
+    void Start()
+    {
+        ballSpawner = FindObjectOfType<BallSpawner>();
     }
 
     void Update()
@@ -42,9 +48,17 @@ public class BallMovement : MonoBehaviour
             }
             else
             {
-                player.GetComponent<PlayerController>().TakeDamage();
+                player.GetComponent<PlayerController>().TakeDamage();  // Уменьшаем здоровье игрока
                 Destroy(gameObject);
             }
+        }
+    }
+
+    void OnDestroy()
+    {
+        if (ballSpawner != null)
+        {
+            ballSpawner.BallDestroyed();  // Уведомляем BallSpawner об уничтожении шарика
         }
     }
 }

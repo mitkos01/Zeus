@@ -26,6 +26,7 @@ public class Projectile : MonoBehaviour
     {
         if (collider.CompareTag("Ball"))
         {
+            collider.gameObject.GetComponent<BallMovement>().player.GetComponent<PlayerController>().AddCoin();  // Начисляем монету
             Destroy(collider.gameObject);
             Destroy(gameObject);
         }

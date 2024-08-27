@@ -5,8 +5,8 @@ public class LightningController : MonoBehaviour
 {
     public GameObject lightningPrefab;
     public Transform lightningRod;
-    public Transform player; 
-    public Button lightningButton; 
+    public Transform player;
+    public Button lightningButton;
     private bool isSelectingTarget = false;
 
     void Start()
@@ -39,5 +39,9 @@ public class LightningController : MonoBehaviour
     {
         GameObject lightning = Instantiate(lightningPrefab, player.position, Quaternion.identity);
         lightning.GetComponent<LightningMovement>().Initialize(player.position, targetPosition, lightningRod.position);
+
+        // ≈сли молни€ уничтожает шарики, добавим метод начислени€ монет здесь
+        // Ќапример:
+        // collider.GetComponent<BallMovement>().player.GetComponent<PlayerController>().AddCoin();
     }
 }
